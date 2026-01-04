@@ -1,0 +1,55 @@
+# Compiler files
+cache/
+out/
+
+# Ignores development broadcast logs
+!/broadcast
+/broadcast/*/31337/
+/broadcast/**/dry-run/
+
+# Docs
+docs/
+
+# Dotenv files
+.env
+.env.*
+!.env.example
+
+# Node modules
+node_modules/
+
+# Scripts folder (contains minting scripts with wallet references)
+scripts/
+
+# Foundry script folder (deployment scripts)
+script/
+
+# Minting results (may contain wallet info)
+minting_results*.json
+
+# Flattened contracts (not needed)
+*_Flattened.sol
+
+# Frontend build artifacts
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+frontend/.env.*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Logs
+*.log
+npm-debug.log*
+
+# Lock files (optional, can include if you want reproducible builds)
+# package-lock.json
+# foundry.lock

@@ -1,0 +1,24 @@
+{
+  "name": "mininft",
+  "version": "1.0.0",
+  "description": "MiniNFT - A collection of 505 unique NFTs on Base",
+  "scripts": {
+    "generate-metadata": "node scripts/generateMetadata.js",
+    "mint": "node scripts/mint.js",
+    "deploy": "source .env && ~/.foundry/bin/forge script script/DeployMiniNFT.s.sol --rpc-url $BASE_RPC_URL --broadcast --verify",
+    "build": "~/.foundry/bin/forge build",
+    "test": "~/.foundry/bin/forge test"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "ethers": "^6.16.0"
+  },
+  "keywords": [
+    "nft",
+    "base",
+    "ethereum",
+    "web3"
+  ],
+  "author": "",
+  "license": "MIT"
+}

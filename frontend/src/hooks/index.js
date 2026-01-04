@@ -1,0 +1,1 @@
+export { useNFTContract } from './useNFTContract';

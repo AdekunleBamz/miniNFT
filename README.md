@@ -1,160 +1,116 @@
-# MiniNFT - NFT Minting Platform on Base
+# 💎 MiniNFT
 
-A complete NFT minting platform featuring 505 unique NFTs on Base Chain mainnet.
+A collection of 505 unique NFTs on Base Chain with micro-pricing.
 
-## 📁 Project Structure
+![MiniNFT Banner](https://img.shields.io/badge/Base-Chain-blue) ![License](https://img.shields.io/badge/License-MIT-green) ![NFTs](https://img.shields.io/badge/NFTs-505-purple)
 
-```
-miniNFT/
-├── src/                    # Solidity contracts
-│   └── MiniNFT.sol         # Main NFT contract
-├── script/                 # Foundry deployment scripts
-│   └── DeployMiniNFT.s.sol # Deployment script
-├── scripts/                # Node.js utility scripts
-│   ├── generateMetadata.js # Generate 505 NFT metadata files
-│   ├── mint.js             # Batch minting script for 15 wallets
-│   └── metadata/           # Generated metadata files
-├── frontend/               # React frontend
-│   ├── src/
-│   │   ├── App.jsx         # Main React component
-│   │   ├── contract.js     # Contract ABI and address
-│   │   ├── main.jsx        # Entry point with Web3 providers
-│   │   └── index.css       # Styles
-│   └── index.html
-├── test/                   # Foundry tests
-└── lib/                    # Dependencies (OpenZeppelin, forge-std)
-```
+## ✨ Features
+
+- **505 Unique NFTs** - Each NFT is uniquely generated
+- **Random Minting** - Get a random NFT from the collection
+- **Micro Price** - Only 0.00001 ETH per mint
+- **Batch Minting** - Mint up to 10 NFTs at once
+- **5 Rarity Tiers** - Common, Uncommon, Rare, Epic, Legendary
+- **Base Chain** - Low gas fees on Ethereum L2
 
 ## 🚀 Quick Start
 
 ### Prerequisites
 
-- [Foundry](https://book.getfoundry.sh/getting-started/installation)
-- Node.js v18+
-- A wallet with ETH on Base mainnet
+- [Node.js](https://nodejs.org/) (v18+)
+- [Foundry](https://getfoundry.sh/)
 
-### 1. Setup Environment
-
-```bash
-cp .env.example .env
-# Edit .env with your private key and other settings
-```
-
-### 2. Build Contracts
+### Smart Contract
 
 ```bash
-~/.foundry/bin/forge build
+# Install dependencies
+forge install
+
+# Build
+forge build
+
+# Test
+forge test
+
+# Deploy (update .env first)
+forge script script/DeployMiniNFT.s.sol --rpc-url base --broadcast
 ```
 
-### 3. Generate Metadata
-
-```bash
-node scripts/generateMetadata.js
-```
-
-This creates 505 unique metadata files in `scripts/metadata/`.
-
-**Next steps for metadata:**
-1. Create/generate images for each NFT
-2. Upload images to IPFS
-3. Update `image` field in metadata with IPFS CID
-4. Upload metadata folder to IPFS
-5. Use metadata CID as `BASE_URI` when deploying
-
-### 4. Deploy Contract
-
-```bash
-# Set environment variables
-export PRIVATE_KEY=your_private_key
-export BASE_URI=ipfs://your_metadata_cid/
-export BASE_RPC_URL=https://mainnet.base.org
-export BASESCAN_API_KEY=your_basescan_api_key
-
-# Deploy
-~/.foundry/bin/forge script script/DeployMiniNFT.s.sol \
-  --rpc-url $BASE_RPC_URL \
-  --broadcast \
-  --verify
-```
-
-### 5. Update Contract Address
-
-After deployment, update the contract address in:
-- `.env` - set `NFT_CONTRACT_ADDRESS`
-- `frontend/src/contract.js` - update `CONTRACT_ADDRESS`
-
-### 6. Run Batch Minting Script
-
-```bash
-# Add to .env
-export NFT_CONTRACT_ADDRESS=0x...your_deployed_address
-export MINTS_PER_WALLET=2
-
-# Run minting
-node scripts/mint.js
-```
-
-### 7. Run Frontend
+### Frontend
 
 ```bash
 cd frontend
+
+# Install dependencies
 npm install
+
+# Run development server
 npm run dev
 ```
 
-## 📜 Smart Contract
+## 📜 Contract Details
 
-### MiniNFT.sol
+| Property | Value |
+|----------|-------|
+| Network | Base Mainnet |
+| Contract | `0x80203c0838a1cABe0eAbc0aC9e22f6Abd512cAa9` |
+| Max Supply | 505 |
+| Mint Price | 0.00001 ETH |
+| Max per Batch | 10 |
 
-- **Max Supply:** 505 NFTs
-- **Mint Price:** 0.00001 ETH
-- **Random Minting:** Each mint reveals a random NFT
-- **Batch Minting:** Mint up to 10 NFTs at once
+## 🏗️ Architecture
 
-#### Key Functions
-
-```solidity
-// Mint single NFT
-function mint() external payable;
-
-// Mint multiple NFTs (max 10)
-function mintBatch(uint256 quantity) external payable;
-
-// View remaining supply
-function remainingSupply() external view returns (uint256);
+```
+miniNFT/
+├── src/
+│   └── MiniNFT.sol          # Main NFT contract
+├── test/
+│   └── MiniNFT.t.sol        # Foundry tests
+├── frontend/
+│   ├── src/
+│   │   ├── components/      # React components
+│   │   ├── hooks/           # Custom hooks
+│   │   ├── App.jsx          # Main app
+│   │   └── contract.js      # Contract config
+│   └── package.json
+└── foundry.toml
 ```
 
-## 🖥️ Frontend Features
+## 🔧 Contract Functions
 
-- Connect wallet via RainbowKit
-- Real-time minting stats
-- Quantity selector (1-10 NFTs)
-- Transaction tracking
-- Mobile responsive design
+### Read Functions
+- `remainingSupply()` - Get available NFTs count
+- `totalSupply()` - Get minted NFTs count
+- `balanceOf(address)` - Get user's NFT count
+- `tokenURI(uint256)` - Get NFT metadata URI
 
-## 🔧 Configuration
+### Write Functions
+- `mint()` - Mint 1 random NFT (0.00001 ETH)
+- `mintBatch(quantity)` - Mint multiple NFTs (max 10)
 
-### Environment Variables
+### Owner Functions
+- `setBaseURI(string)` - Update metadata URI
+- `withdraw()` - Withdraw contract balance
 
-| Variable | Description |
-|----------|-------------|
-| `PRIVATE_KEY` | Deployer wallet private key |
-| `BASE_URI` | IPFS URI for metadata |
-| `BASESCAN_API_KEY` | BaseScan API key |
-| `BASE_RPC_URL` | RPC endpoint |
-| `NFT_CONTRACT_ADDRESS` | Deployed contract address |
-| `MINTS_PER_WALLET` | NFTs each wallet mints |
+## 🎨 NFT Rarity Distribution
 
-## 📊 NFT Rarity Distribution
+| Tier | Probability | Count |
+|------|-------------|-------|
+| Common | 40% | ~202 |
+| Uncommon | 30% | ~152 |
+| Rare | 18% | ~91 |
+| Epic | 9% | ~45 |
+| Legendary | 3% | ~15 |
 
-| Rarity | Approximate % |
-|--------|---------------|
-| Common | ~50% |
-| Uncommon | ~30% |
-| Rare | ~15% |
-| Epic | ~5% |
-| Legendary | ~1% |
+## 🔗 Links
+
+- [Contract on BaseScan](https://basescan.org/address/0x80203c0838a1cABe0eAbc0aC9e22f6Abd512cAa9)
+- [OpenSea Collection](https://opensea.io/collection/mininft)
 
 ## 📄 License
 
-MIT
+MIT License - see [LICENSE](LICENSE) for details.
+
+---
+
+Built with ❤️ on Base Chain

@@ -1074,3 +1074,10 @@ input:focus, button:focus {
     .sm\:grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
     .sm\:hidden { display: none; }
 }
+
+@media (min-width: 768px) {
+    .md\:flex { display: flex; }
+    .md\:grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
+    .md\:hidden { display: none; }
+    .md\:block { display: block; }
+}

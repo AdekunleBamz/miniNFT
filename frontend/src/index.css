@@ -1020,3 +1020,10 @@ input:focus, button:focus {
 .inset-0 { inset: 0; }
 .z-10 { z-index: 10; }
 .z-50 { z-index: 50; }
+
+.rounded { border-radius: 0.25rem; }
+.rounded-lg { border-radius: 0.5rem; }
+.rounded-xl { border-radius: 1rem; }
+.rounded-full { border-radius: 9999px; }
+.border { border: 1px solid var(--border-color); }
+.border-2 { border-width: 2px; }

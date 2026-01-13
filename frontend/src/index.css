@@ -840,3 +840,16 @@ body {
 .tooltip:hover::after {
     opacity: 1;
 }
+
+.badge {
+    display: inline-block;
+    padding: 4px 10px;
+    background: var(--primary);
+    color: white;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.badge-success { background: var(--success); color: #000; }
+.badge-error { background: var(--error); }

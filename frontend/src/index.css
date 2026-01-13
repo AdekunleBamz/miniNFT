@@ -763,3 +763,11 @@ body {
     transform: translateY(-5px);
     box-shadow: 0 10px 40px rgba(123, 63, 228, 0.3);
 }
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.fade-in {
+    animation: fadeIn 0.5s ease forwards;
+}

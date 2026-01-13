@@ -661,3 +661,10 @@ body {
 .pulse {
     animation: pulse 2s ease-in-out infinite;
 }
+
+.hover-scale {
+    transition: transform 0.2s ease;
+}
+.hover-scale:hover {
+    transform: scale(1.05);
+}

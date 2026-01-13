@@ -714,3 +714,8 @@ body {
     border: 1px solid var(--border-color);
     box-shadow: 0 0 15px rgba(123, 63, 228, 0.2);
 }
+
+/* Enhanced typography */
+:root {
+  --font-display: 'Inter', sans-serif;
+}

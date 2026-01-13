@@ -1005,3 +1005,10 @@ input:focus, button:focus {
 .text-xl { font-size: 1.25rem; }
 .font-bold { font-weight: 700; }
 .font-medium { font-weight: 500; }
+
+.hidden { display: none; }
+.visible { visibility: visible; }
+.invisible { visibility: hidden; }
+.opacity-0 { opacity: 0; }
+.opacity-50 { opacity: 0.5; }
+.opacity-100 { opacity: 1; }

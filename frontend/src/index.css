@@ -1081,3 +1081,10 @@ input:focus, button:focus {
     .md\:hidden { display: none; }
     .md\:block { display: block; }
 }
+
+@media (min-width: 1024px) {
+    .lg\:flex { display: flex; }
+    .lg\:grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
+    .lg\:hidden { display: none; }
+    .lg\:block { display: block; }
+}

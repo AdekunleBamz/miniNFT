@@ -709,3 +709,8 @@ body {
 .slide-up {
     animation: slideUp 0.4s ease forwards;
 }
+
+.border-glow {
+    border: 1px solid var(--border-color);
+    box-shadow: 0 0 15px rgba(123, 63, 228, 0.2);
+}

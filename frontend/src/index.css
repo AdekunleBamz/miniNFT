@@ -1088,3 +1088,10 @@ input:focus, button:focus {
     .lg\:hidden { display: none; }
     .lg\:block { display: block; }
 }
+
+.text-primary { color: var(--primary); }
+.text-secondary { color: var(--text-secondary); }
+.text-success { color: var(--success); }
+.text-error { color: var(--error); }
+.bg-primary { background-color: var(--primary); }
+.bg-dark { background-color: var(--bg-dark); }

@@ -886,3 +886,9 @@ input:focus, button:focus {
 .rotate {
     animation: rotate 1s linear infinite;
 }
+
+.glass {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}

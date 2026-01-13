@@ -719,3 +719,7 @@ body {
 :root {
   --font-display: 'Inter', sans-serif;
 }
+
+.glow-effect {
+    box-shadow: 0 0 20px rgba(123, 63, 228, 0.4);
+}

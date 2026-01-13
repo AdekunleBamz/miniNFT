@@ -892,3 +892,8 @@ input:focus, button:focus {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 }
+
+.neon-border {
+    border: 2px solid var(--primary);
+    box-shadow: 0 0 10px var(--primary), inset 0 0 10px rgba(123, 63, 228, 0.1);
+}

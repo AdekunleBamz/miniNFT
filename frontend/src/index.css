@@ -1050,3 +1050,9 @@ input:focus, button:focus {
 .cursor-not-allowed { cursor: not-allowed; }
 .cursor-wait { cursor: wait; }
 .select-none { user-select: none; }
+
+.transition { transition: all 0.3s ease; }
+.transition-fast { transition: all 0.15s ease; }
+.transition-slow { transition: all 0.5s ease; }
+.duration-200 { transition-duration: 200ms; }
+.duration-300 { transition-duration: 300ms; }

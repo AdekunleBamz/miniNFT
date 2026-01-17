@@ -58,6 +58,8 @@ npm run dev
 | Mint Price | 0.00001 ETH |
 | Max per Batch | 10 |
 
+🔍 **[View on BaseScan](https://basescan.org/address/0x80203c0838a1cABe0eAbc0aC9e22f6Abd512cAa9)**
+
 ## 🏗️ Architecture
 
 ```

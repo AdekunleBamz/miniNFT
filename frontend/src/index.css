@@ -81,6 +81,21 @@ body {
   75% { transform: translate(-50px, -30px); }
 }
 
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.skeleton {
+  background: linear-gradient(90deg, rgba(123, 63, 228, 0.1) 25%, rgba(123, 63, 228, 0.2) 50%, rgba(123, 63, 228, 0.1) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+.mx-auto { margin-left: auto; margin-right: auto; }
+.mt-2 { margin-top: 0.5rem; }
+.mt-4 { margin-top: 1rem; }
+
 /* Header */
 .header {
   display: flex;

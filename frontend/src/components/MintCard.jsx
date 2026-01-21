@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 import { parseEther } from 'viem';
+import { ButtonSpinner, Tooltip } from './index';
 import { MININFT_ABI, CONTRACT_ADDRESS, MINT_PRICE } from '../contract';
 
 function MintCard({ 
@@ -53,21 +54,25 @@ function MintCard({
       ) : (
         <>
           <div className="quantity-selector">
-            <button 
-              className="quantity-btn"
-              onClick={() => setMintQuantity(Math.max(1, mintQuantity - 1))}
-              disabled={mintQuantity <= 1}
-            >
-              −
-            </button>
+            <Tooltip content="Minimum 1 NFT" position="top">
+              <button 
+                className="quantity-btn"
+                onClick={() => setMintQuantity(Math.max(1, mintQuantity - 1))}
+                disabled={mintQuantity <= 1}
+              >
+                −
+              </button>
+            </Tooltip>
             <span className="quantity-value">{mintQuantity}</span>
-            <button 
-              className="quantity-btn"
-              onClick={() => setMintQuantity(Math.min(10, mintQuantity + 1, remaining))}
-              disabled={mintQuantity >= 10 || mintQuantity >= remaining}
-            >
-              +
-            </button>
+            <Tooltip content="Maximum 10 NFTs per batch" position="top">
+              <button 
+                className="quantity-btn"
+                onClick={() => setMintQuantity(Math.min(10, mintQuantity + 1, remaining))}
+                disabled={mintQuantity >= 10 || mintQuantity >= remaining}
+              >
+                +
+              </button>
+            </Tooltip>
           </div>
 
           <div className="total-price">
@@ -79,9 +84,17 @@ function MintCard({
             onClick={handleMint}
             disabled={isPending || isConfirming}
           >
-            {isPending ? '⏳ Confirm in Wallet...' : 
-             isConfirming ? '🔄 Minting...' : 
-             `🎨 Mint ${mintQuantity} NFT${mintQuantity > 1 ? 's' : ''}`}
+            {isPending && (
+              <>
+                Confirm in Wallet <ButtonSpinner />
+              </>
+            )}
+            {isConfirming && !isPending && (
+              <>
+                Minting... <ButtonSpinner />
+              </>
+            )}
+            {!isPending && !isConfirming && `🎨 Mint ${mintQuantity} NFT${mintQuantity > 1 ? 's' : ''}`}
           </button>
 
           {isSuccess && (

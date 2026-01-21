@@ -1245,3 +1245,79 @@ body {
 .card:hover .card-image img {
   transform: scale(1.05);
 }
+
+/* Spinner and loading */
+.spinner {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinner-ring {
+  border: 2px solid transparent;
+  border-top-color: currentColor;
+  border-radius: 50%;
+  animation: spinnerRotate 0.9s linear infinite;
+}
+
+.spinner-sm .spinner-ring { width: 16px; height: 16px; border-width: 2px; }
+.spinner-md .spinner-ring { width: 24px; height: 24px; border-width: 2.5px; }
+.spinner-lg .spinner-ring { width: 36px; height: 36px; border-width: 3px; }
+
+.spinner-primary { color: var(--primary); }
+.spinner-secondary { color: var(--secondary); }
+.spinner-white { color: #ffffff; }
+
+@keyframes spinnerRotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.loading-overlay-container {
+  position: relative;
+}
+
+.loading-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  background: rgba(10, 10, 15, 0.7);
+  backdrop-filter: blur(4px);
+  border-radius: 12px;
+  z-index: 5;
+}
+
+.loading-text {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.button-spinner {
+  margin-left: 0.5rem;
+}
+
+.page-loader {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-dark);
+  z-index: 2000;
+}
+
+.page-loader-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  color: var(--text-primary);
+}
+
+.page-loader-icon {
+  font-size: 2rem;
+}

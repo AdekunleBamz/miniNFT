@@ -1202,6 +1202,11 @@ body {
   border-color: rgba(123, 63, 228, 0.5);
 }
 
+.card:focus-visible {
+  outline: 2px solid var(--secondary);
+  outline-offset: 2px;
+}
+
 .card-default {
   background: var(--bg-card);
 }

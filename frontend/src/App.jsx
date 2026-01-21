@@ -12,6 +12,7 @@ function App() {
     remaining,
     progress,
     userBalance,
+    isLoading,
     hash,
     writeContract,
     isPending,
@@ -69,6 +70,7 @@ function App() {
           remaining={remaining}
           userBalance={userBalance}
           isConnected={isConnected}
+          isLoading={isLoading}
         />
 
         {/* Progress bar */}

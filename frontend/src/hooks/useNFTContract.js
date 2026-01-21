@@ -5,21 +5,21 @@ export function useNFTContract() {
   const { address, isConnected } = useAccount();
 
   // Read remaining supply
-  const { data: remainingSupply, refetch: refetchRemaining } = useReadContract({
+  const { data: remainingSupply, refetch: refetchRemaining, isFetching: isFetchingRemaining } = useReadContract({
     address: CONTRACT_ADDRESS,
     abi: MININFT_ABI,
     functionName: 'remainingSupply',
   });
 
   // Read total supply
-  const { data: totalSupply, refetch: refetchTotal } = useReadContract({
+  const { data: totalSupply, refetch: refetchTotal, isFetching: isFetchingTotal } = useReadContract({
     address: CONTRACT_ADDRESS,
     abi: MININFT_ABI,
     functionName: 'totalSupply',
   });
 
   // Read user balance
-  const { data: userBalance, refetch: refetchBalance } = useReadContract({
+  const { data: userBalance, refetch: refetchBalance, isFetching: isFetchingBalance } = useReadContract({
     address: CONTRACT_ADDRESS,
     abi: MININFT_ABI,
     functionName: 'balanceOf',
@@ -57,6 +57,7 @@ export function useNFTContract() {
     remaining,
     progress,
     userBalance: userBalance ? Number(userBalance) : 0,
+    isLoading: isFetchingRemaining || isFetchingTotal || (!!address && isFetchingBalance),
     
     // Transaction
     hash,

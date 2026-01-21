@@ -1,6 +1,11 @@
 import { MINT_PRICE, MAX_SUPPLY } from '../contract';
+import { StatsSkeleton } from './LoadingSkeleton';
 
-function Stats({ minted, remaining, userBalance, isConnected }) {
+function Stats({ minted, remaining, userBalance, isConnected, isLoading }) {
+  if (isLoading) {
+    return <StatsSkeleton />;
+  }
+
   return (
     <div className="stats-container">
       <div className="stat-card">

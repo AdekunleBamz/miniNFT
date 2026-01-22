@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react';
 import { Header, Stats, MintCard, Gallery, Features, Footer, ProgressBar, useToast } from './components';
-import { useNFTContract } from './hooks';
+import { useNFTContract, useConfetti } from './hooks';
 import { MAX_SUPPLY } from './contract';
 
 function App() {
   const { success, error } = useToast();
+  const { fireFromCenter } = useConfetti();
   const {
     address,
     isConnected,
@@ -33,8 +34,9 @@ function App() {
         timestamp: new Date().toLocaleTimeString(),
       }, ...prev.slice(0, 4)]);
       success('Mint successful! Your NFT is on the way.', 4000);
+      fireFromCenter();
     }
-  }, [isSuccess, hash, refetchAll, success]);
+  }, [isSuccess, hash, refetchAll, success, fireFromCenter]);
 
   useEffect(() => {
     if (writeError) {

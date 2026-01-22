@@ -2590,3 +2590,145 @@ body {
   color: var(--primary);
   font-family: monospace;
 }
+
+/* Transfer Modal Component */
+.transfer-modal {
+  background: var(--bg-card-solid);
+  border-radius: 20px;
+  padding: 2rem;
+  max-width: 420px;
+  width: 90%;
+  position: relative;
+}
+
+.transfer-modal.success {
+  text-align: center;
+  padding: 2.5rem;
+}
+
+.transfer-success-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.transfer-modal.success h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.transfer-modal.success p {
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.transfer-tx-link {
+  display: inline-block;
+  color: var(--primary);
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
+
+.transfer-tx-link:hover {
+  text-decoration: underline;
+}
+
+.transfer-done-btn {
+  padding: 0.75rem 2rem;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.transfer-title {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.transfer-nft-preview {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: rgba(123, 63, 228, 0.05);
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+}
+
+.transfer-nft-preview img {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.transfer-nft-preview span {
+  font-weight: 600;
+}
+
+.transfer-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.transfer-label {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.transfer-input {
+  padding: 0.875rem 1rem;
+  background: rgba(123, 63, 228, 0.05);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  color: var(--text-primary);
+  font-size: 1rem;
+  font-family: monospace;
+}
+
+.transfer-input:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.transfer-error {
+  color: var(--error);
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+}
+
+.transfer-warning {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  background: rgba(255, 165, 2, 0.1);
+  border-radius: 8px;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin: 1rem 0;
+}
+
+.transfer-submit-btn {
+  padding: 1rem;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.transfer-submit-btn:hover:not(:disabled) {
+  background: var(--primary-dark);
+}
+
+.transfer-submit-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

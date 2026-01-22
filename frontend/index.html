@@ -3,12 +3,52 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/nft-icon.svg" />
+    <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#8b5cf6" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <title>MiniNFT - Mint Your Unique NFT on Base</title>
     <meta name="description" content="Mint unique NFTs from a collection of 505 on Base Chain for just 0.00001 ETH" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://mininft.xyz/" />
+    <meta property="og:title" content="MiniNFT - Mint Your Unique NFT on Base" />
+    <meta property="og:description" content="Mint unique NFTs from a collection of 505 on Base Chain for just 0.00001 ETH" />
+    <meta property="og:image" content="/og-image.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://mininft.xyz/" />
+    <meta property="twitter:title" content="MiniNFT - Mint Your Unique NFT on Base" />
+    <meta property="twitter:description" content="Mint unique NFTs from a collection of 505 on Base Chain for just 0.00001 ETH" />
+    <meta property="twitter:image" content="/og-image.png" />
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json" />
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <script>
+      // Register service worker
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then((registration) => {
+              console.log('SW registered:', registration.scope);
+            })
+            .catch((error) => {
+              console.log('SW registration failed:', error);
+            });
+        });
+      }
+    </script>
   </body>
 </html>

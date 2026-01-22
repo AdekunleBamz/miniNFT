@@ -45,3 +45,7 @@ export { default as Avatar, AvatarGroup } from './Avatar';
 export { default as Dropdown, DropdownItem, DropdownDivider, DropdownHeader } from './Dropdown';
 export { default as Alert, AlertBanner } from './Alert';
 export { default as Skeleton, SkeletonText, SkeletonCard, NFTCardSkeleton } from './Skeleton';
+export { default as ErrorBoundary, withErrorBoundary, useErrorHandler } from './ErrorBoundary';
+export { default as NotificationProvider, useNotification, useNotify } from './Notification';
+export { default as ConnectWallet } from './ConnectWallet';
+export { default as CollectionStats, StatCard, LiveMintFeed } from './CollectionStats';

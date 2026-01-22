@@ -1463,3 +1463,26 @@ body {
     transform: translateY(100vh) rotate(720deg) scale(0.5);
   }
 }
+
+/* Sound toggle */
+.sound-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.sound-toggle:hover {
+  border-color: var(--primary);
+  background: rgba(123, 63, 228, 0.1);
+}
+
+.sound-toggle-icon {
+  font-size: 1.1rem;
+}

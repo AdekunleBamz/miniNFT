@@ -19,3 +19,7 @@ export { LoadingOverlay, ButtonSpinner, PageLoader } from './Spinner';
 export { default as CopyButton } from './CopyButton';
 export { default as ThemeToggle } from './ThemeToggle';
 export { default as SoundToggle } from './SoundToggle';
+export { default as FavoriteButton } from './FavoriteButton';
+export { default as SearchInput } from './SearchInput';
+export { default as SortSelect } from './SortSelect';
+export { default as FilterBar } from './FilterBar';

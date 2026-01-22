@@ -19,3 +19,5 @@ export { useIntersectionObserver, useWindowSize, useElementSize, useClickOutside
 export { useWallet, useBalance, useNetwork, useSwitchNetwork, useConnect, useDisconnect } from './useWallet';
 export { useTransactionHistory, useRecentTransactions, usePendingTransactions } from './useTransactionHistory';
 export { default as useEvent, useLatest, useEffectOnce, useUpdateEffect, useUnmount, useSafeState, useRenderCount, useWhyDidYouUpdate, useMemoCompare } from './useEvent';
+export { default as useNotifications, usePushNotifications } from './useNotifications';
+export { default as useContractEvents, useMintEvents, useTransferEvents, useApprovalEvents } from './useContractEvents';

@@ -23,3 +23,4 @@ export { default as FavoriteButton } from './FavoriteButton';
 export { default as SearchInput } from './SearchInput';
 export { default as SortSelect } from './SortSelect';
 export { default as FilterBar } from './FilterBar';
+export { default as Pagination } from './Pagination';

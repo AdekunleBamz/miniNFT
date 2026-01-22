@@ -9,3 +9,6 @@ export { useShare } from './useShare';
 export { useLocalStorage } from './useLocalStorage';
 export { useClipboard } from './useClipboard';
 export { useMediaQuery, useIsMobile, useIsTablet, useIsDesktop, usePrefersDarkMode, usePrefersReducedMotion } from './useMediaQuery';
+export { useDebounce } from './useDebounce';
+export { useCountdown } from './useCountdown';
+export { useInterval, useTimeout, useAnimationFrame } from './useInterval';

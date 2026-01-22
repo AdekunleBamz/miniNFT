@@ -19,10 +19,12 @@ docs/
 node_modules/
 
 # Scripts folder (contains minting scripts with wallet references)
-scripts/
+# scripts/
 
-# Foundry script folder (deployment scripts)
-script/
+# Keep Foundry deployment scripts (*.s.sol files)
+# Ignore any private key files or local configs in script/
+script/*.json
+script/*.local.sol
 
 # Minting results (may contain wallet info)
 minting_results*.json

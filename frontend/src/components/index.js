@@ -32,3 +32,8 @@ export { default as EmptyState } from './EmptyState';
 export { default as ErrorMessage } from './ErrorMessage';
 export { default as NetworkBadge } from './NetworkBadge';
 export { default as WalletAddress } from './WalletAddress';
+export { default as TransactionHistory } from './TransactionHistory';
+export { default as Leaderboard } from './Leaderboard';
+export { default as GasEstimator } from './GasEstimator';
+export { default as TransferModal } from './TransferModal';
+export { default as BatchTransfer } from './BatchTransfer';

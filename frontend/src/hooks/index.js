@@ -16,3 +16,5 @@ export { useAsync, usePrevious, useToggle, useHover, useFocus, useIsMounted, use
 export { default as useForm, useField, validators, composeValidators } from './useForm';
 export { useScrollPosition, useScrollTo, useScrollThreshold, useInfiniteScroll, useScrollLock } from './useScroll';
 export { useIntersectionObserver, useWindowSize, useElementSize, useClickOutside, useKeyboard } from './useDom';
+export { useWallet, useBalance, useNetwork, useSwitchNetwork, useConnect, useDisconnect } from './useWallet';
+export { useTransactionHistory, useRecentTransactions, usePendingTransactions } from './useTransactionHistory';

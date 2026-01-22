@@ -6,3 +6,6 @@ export { useFavorites } from './useFavorites';
 export { useGalleryFilters } from './useGalleryFilters';
 export { usePagination } from './usePagination';
 export { useShare } from './useShare';
+export { useLocalStorage } from './useLocalStorage';
+export { useClipboard } from './useClipboard';
+export { useMediaQuery, useIsMobile, useIsTablet, useIsDesktop, usePrefersDarkMode, usePrefersReducedMotion } from './useMediaQuery';

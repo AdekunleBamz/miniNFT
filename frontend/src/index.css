@@ -2006,3 +2006,54 @@ body {
 .nft-external-link:hover {
   color: var(--secondary);
 }
+
+/* Countdown Component */
+.countdown {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.countdown-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 1.25rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  min-width: 70px;
+}
+
+.countdown-value {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--primary);
+  font-variant-numeric: tabular-nums;
+}
+
+.countdown-label {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 0.25rem;
+}
+
+.countdown.compact {
+  gap: 0.5rem;
+}
+
+.countdown.compact .countdown-unit {
+  padding: 0.5rem 0.75rem;
+  min-width: 50px;
+}
+
+.countdown.compact .countdown-value {
+  font-size: 1.25rem;
+}
+
+.countdown.compact .countdown-label {
+  font-size: 0.65rem;
+}

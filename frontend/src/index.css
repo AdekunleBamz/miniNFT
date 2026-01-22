@@ -4372,3 +4372,544 @@ body {
   pointer-events: none;
 }
 
+/* RarityBadge Styles */
+.rarity-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  font-weight: 500;
+  background: var(--rarity-bg);
+  color: var(--rarity-color);
+  border: 1px solid var(--rarity-color);
+}
+
+.rarity-badge--small {
+  font-size: 0.625rem;
+  padding: 0.125rem 0.375rem;
+}
+
+.rarity-badge--medium {
+  font-size: 0.75rem;
+}
+
+.rarity-badge--large {
+  font-size: 0.875rem;
+  padding: 0.375rem 0.75rem;
+}
+
+.rarity-badge__icon {
+  font-size: 0.75em;
+}
+
+.rarity-indicator {
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.rarity-progress__bar {
+  display: flex;
+  height: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+  background: var(--bg-card);
+}
+
+.rarity-progress__segment {
+  height: 100%;
+  transition: width 0.5s ease;
+}
+
+.rarity-progress__legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 0.75rem;
+}
+
+.rarity-progress__legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.rarity-progress__legend-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+/* OwnershipHistory Styles */
+.ownership-history {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 1.25rem;
+}
+
+.ownership-history__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.ownership-history__title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.ownership-history__title svg {
+  width: 20px;
+  height: 20px;
+}
+
+.ownership-history__count {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  background: var(--bg-dark);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+
+.ownership-history__timeline {
+  position: relative;
+}
+
+.ownership-history__item {
+  display: flex;
+  gap: 1rem;
+  padding-bottom: 1rem;
+}
+
+.ownership-history__connector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ownership-history__dot {
+  width: 12px;
+  height: 12px;
+  background: var(--primary);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.ownership-history__line {
+  width: 2px;
+  flex: 1;
+  background: var(--border-color);
+  margin-top: 0.5rem;
+}
+
+.ownership-history__content {
+  flex: 1;
+}
+
+.ownership-history__event {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.ownership-history__type {
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.ownership-history__tx-link {
+  display: flex;
+  align-items: center;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.ownership-history__tx-link svg {
+  width: 14px;
+  height: 14px;
+}
+
+.ownership-history__addresses {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.5rem;
+}
+
+.ownership-history__meta {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.ownership-history__toggle {
+  width: 100%;
+  padding: 0.75rem;
+  background: var(--bg-dark);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  color: var(--primary);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-top: 0.5rem;
+}
+
+.ownership-history__toggle:hover {
+  border-color: var(--primary);
+}
+
+.address-display {
+  display: flex;
+  flex-direction: column;
+}
+
+.address-display__label {
+  font-size: 0.625rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+}
+
+.address-display__value {
+  font-size: 0.875rem;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.arrow-icon {
+  width: 16px;
+  height: 16px;
+  color: var(--text-secondary);
+}
+
+/* AttributeCard Styles */
+.attribute-card {
+  background: var(--bg-dark);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 0.75rem;
+}
+
+.attribute-card__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.375rem;
+}
+
+.attribute-card__trait {
+  font-size: 0.625rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.attribute-card__rarity {
+  font-size: 0.625rem;
+  color: var(--primary);
+}
+
+.attribute-card__value {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.attribute-card__rarity-bar {
+  height: 3px;
+  background: var(--bg-card);
+  border-radius: 2px;
+  margin-top: 0.5rem;
+  overflow: hidden;
+}
+
+.attribute-card__rarity-fill {
+  height: 100%;
+  background: var(--primary);
+  border-radius: 2px;
+}
+
+.attribute-grid {
+  display: grid;
+  grid-template-columns: repeat(var(--columns, 3), 1fr);
+  gap: 0.75rem;
+}
+
+/* MintProgress Styles */
+.mint-progress {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.mint-progress__status {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.mint-progress__icon-wrapper {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mint-progress__icon {
+  font-size: 3rem;
+}
+
+.mint-progress__label {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.mint-progress__tx {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+.mint-progress__tx-link {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.mint-progress__tx-link svg {
+  width: 14px;
+  height: 14px;
+}
+
+.mint-progress__success,
+.mint-progress__error {
+  margin-bottom: 1.5rem;
+}
+
+.mint-progress__token {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.mint-progress__actions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+.mint-progress__btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s;
+  border: none;
+}
+
+.mint-progress__btn--primary {
+  background: var(--primary);
+  color: white;
+}
+
+.mint-progress__btn--secondary {
+  background: var(--bg-dark);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+
+.mint-progress__error-message {
+  color: var(--error);
+  margin-bottom: 1rem;
+}
+
+.mint-progress__steps {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.progress-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  opacity: 0.5;
+}
+
+.progress-step--active,
+.progress-step--completed {
+  opacity: 1;
+}
+
+.progress-step__indicator {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-dark);
+  border: 2px solid var(--border-color);
+  border-radius: 50%;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.progress-step--completed .progress-step__indicator {
+  background: var(--success);
+  border-color: var(--success);
+  color: white;
+}
+
+.progress-step--active .progress-step__indicator {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.progress-step__indicator svg {
+  width: 16px;
+  height: 16px;
+}
+
+.progress-step__label {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+/* ImagePreview Styles */
+.image-preview {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--bg-card);
+}
+
+.image-preview__skeleton {
+  position: absolute;
+  inset: 0;
+  background: var(--bg-card);
+}
+
+.image-preview__skeleton-shimmer {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  animation: shimmer 1.5s infinite;
+}
+
+.image-preview__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.image-preview__image--loaded {
+  opacity: 1;
+}
+
+.image-preview--zoomed .image-preview__image {
+  transform: scale(2);
+}
+
+.image-preview__controls {
+  position: absolute;
+  bottom: 0.75rem;
+  right: 0.75rem;
+  display: flex;
+  gap: 0.5rem;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.image-preview:hover .image-preview__controls {
+  opacity: 1;
+}
+
+.image-preview__btn {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.7);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.image-preview__btn:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.image-preview__btn svg {
+  width: 18px;
+  height: 18px;
+}
+
+.image-preview__fullscreen {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-preview__fullscreen img {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+}
+
+.image-preview__close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+}
+
+.image-preview__close svg {
+  width: 24px;
+  height: 24px;
+}
+

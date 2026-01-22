@@ -50,3 +50,10 @@ export { default as NotificationProvider, useNotification, useNotify } from './N
 export { default as ConnectWallet } from './ConnectWallet';
 export { default as CollectionStats, StatCard, LiveMintFeed } from './CollectionStats';
 export { default as MintButton, BatchMintButton } from './MintButton';
+export { default as RarityBadge, RarityIndicator, RarityProgress } from './RarityBadge';
+export { default as OwnershipHistory } from './OwnershipHistory';
+export { default as AttributeCard, AttributeGrid, AttributeFilter, AttributeSummary } from './AttributeCard';
+export { default as PriceDisplay, PriceTag, PriceChange, FloorPrice } from './PriceDisplay';
+export { default as MintProgress } from './MintProgress';
+export { default as ImagePreview, ImageGallery } from './ImagePreview';
+export { default as Confetti, ConfettiButton, useConfettiEffect } from './Confetti';

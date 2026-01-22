@@ -17,3 +17,4 @@ export { default as Card } from './Card';
 export { default as Spinner } from './Spinner';
 export { LoadingOverlay, ButtonSpinner, PageLoader } from './Spinner';
 export { default as CopyButton } from './CopyButton';
+export { default as ThemeToggle } from './ThemeToggle';

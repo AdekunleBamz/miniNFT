@@ -2371,3 +2371,118 @@ body {
   border-color: var(--primary);
   color: var(--primary);
 }
+
+/* Leaderboard Component */
+.leaderboard {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.leaderboard.loading {
+  padding: 1.5rem;
+}
+
+.leaderboard-skeleton .skeleton-row {
+  display: flex;
+  gap: 1rem;
+  padding: 0.75rem;
+  align-items: center;
+}
+
+.skeleton-rank {
+  width: 30px;
+  height: 30px;
+  background: rgba(123, 63, 228, 0.1);
+  border-radius: 50%;
+  animation: shimmer 1.5s infinite;
+}
+
+.skeleton-address {
+  flex: 1;
+  height: 16px;
+  background: rgba(123, 63, 228, 0.1);
+  border-radius: 4px;
+  animation: shimmer 1.5s infinite;
+}
+
+.skeleton-count {
+  width: 60px;
+  height: 16px;
+  background: rgba(123, 63, 228, 0.1);
+  border-radius: 4px;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+.leaderboard-header {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.leaderboard-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.leaderboard-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.leaderboard-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1.5rem;
+  transition: background 0.2s ease;
+}
+
+.leaderboard-item:hover {
+  background: rgba(123, 63, 228, 0.05);
+}
+
+.leaderboard-rank {
+  width: 40px;
+  text-align: center;
+  font-size: 1.25rem;
+}
+
+.leaderboard-address {
+  flex: 1;
+}
+
+.leaderboard-address a {
+  color: var(--text-primary);
+  text-decoration: none;
+  font-family: monospace;
+}
+
+.leaderboard-address a:hover {
+  color: var(--primary);
+}
+
+.leaderboard-count {
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.leaderboard-change {
+  width: 40px;
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.leaderboard-change.positive {
+  color: var(--success);
+}
+
+.leaderboard-change.negative {
+  color: var(--error);
+}

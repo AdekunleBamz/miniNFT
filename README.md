@@ -63,18 +63,63 @@ npm run dev
 ```
 miniNFT/
 ├── src/
-│   └── MiniNFT.sol          # Main NFT contract
+│   └── MiniNFT.sol          # Main NFT contract (ERC721)
 ├── test/
 │   └── MiniNFT.t.sol        # Foundry tests
 ├── frontend/
+│   ├── public/
+│   │   ├── manifest.json    # PWA manifest
+│   │   └── sw.js            # Service worker
 │   ├── src/
-│   │   ├── components/      # React components
-│   │   ├── hooks/           # Custom hooks
+│   │   ├── components/      # 50+ React components
+│   │   ├── hooks/           # 20+ custom hooks
+│   │   ├── utils/           # Utility functions
+│   │   ├── constants/       # App configuration
 │   │   ├── App.jsx          # Main app
 │   │   └── contract.js      # Contract config
 │   └── package.json
 └── foundry.toml
 ```
+
+## 🛠️ Tech Stack
+
+### Smart Contract
+- **Solidity** - Smart contract language
+- **Foundry** - Development framework
+- **OpenZeppelin** - ERC721 implementation
+
+### Frontend
+- **React 19** - UI library
+- **Vite** - Build tool
+- **wagmi** - React hooks for Ethereum
+- **viem** - TypeScript interface for Ethereum
+- **RainbowKit** - Wallet connection UI
+
+## 📦 Frontend Features
+
+### Components (50+)
+- **Core**: Header, Footer, MintCard, Gallery, Stats
+- **UI**: Modal, Toast, Tooltip, Badge, Card, Spinner
+- **NFT**: NFTCard, NFTDetailModal, ShareMenu, FavoriteButton
+- **Wallet**: ConnectWallet, NetworkBadge, WalletAddress
+- **Forms**: SearchInput, SortSelect, FilterBar, Pagination
+- **Feedback**: ErrorBoundary, Notification, Alert, Skeleton
+- **Advanced**: TransferModal, BatchTransfer, Leaderboard, GasEstimator
+
+### Custom Hooks (20+)
+- **Contract**: useNFTContract, useWallet, useTransactionHistory
+- **State**: useLocalStorage, useFavorites, useGalleryFilters
+- **UI**: useTheme, useSound, useConfetti, useCountdown
+- **Utilities**: useClipboard, useDebounce, useMediaQuery, useForm
+- **DOM**: useScrollPosition, useIntersectionObserver, useClickOutside
+
+### Utilities
+- **format.js** - Number and address formatting
+- **validation.js** - Input validation
+- **storage.js** - LocalStorage helpers
+- **nft.js** - IPFS and metadata utilities
+- **animations.js** - Animation functions
+- **web3.js** - Blockchain utilities
 
 ## 🔧 Contract Functions
 

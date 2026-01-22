@@ -24,3 +24,6 @@ export { default as SearchInput } from './SearchInput';
 export { default as SortSelect } from './SortSelect';
 export { default as FilterBar } from './FilterBar';
 export { default as Pagination } from './Pagination';
+export { default as NFTCard } from './NFTCard';
+export { default as ShareMenu } from './ShareMenu';
+export { default as NFTDetailModal } from './NFTDetailModal';

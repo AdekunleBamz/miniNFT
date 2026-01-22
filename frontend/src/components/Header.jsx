@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 import Badge from './Badge';
+import ThemeToggle from './ThemeToggle';
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -27,7 +28,8 @@ function Header() {
         <a href="#about" onClick={() => setIsMenuOpen(false)}>About</a>
       </nav>
       
-      <div className="header-connect">
+      <div className="header-actions">
+        <ThemeToggle />
         <ConnectButton />
       </div>
     </header>

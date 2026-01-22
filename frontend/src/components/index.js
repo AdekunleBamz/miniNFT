@@ -49,3 +49,4 @@ export { default as ErrorBoundary, withErrorBoundary, useErrorHandler } from './
 export { default as NotificationProvider, useNotification, useNotify } from './Notification';
 export { default as ConnectWallet } from './ConnectWallet';
 export { default as CollectionStats, StatCard, LiveMintFeed } from './CollectionStats';
+export { default as MintButton, BatchMintButton } from './MintButton';

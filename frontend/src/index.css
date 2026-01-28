@@ -5875,3 +5875,43 @@ select:focus-visible {
 .stepper-small .stepper-indicator { width: 32px; height: 32px; font-size: 0.75rem; }
 .stepper-large .stepper-indicator { width: 48px; height: 48px; font-size: 1rem; }
 
+/* Accessibility utilities */
+.visually-hidden,
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+.visually-hidden-focusable:not(:focus):not(:focus-within),
+.sr-only-focusable:not(:focus):not(:focus-within) {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* Focus trap indicator */
+[data-focus-trap="active"] {
+  outline: 2px dashed var(--primary);
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .card, .btn, .chip {
+    border-width: 2px;
+  }
+}
+

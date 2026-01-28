@@ -54,6 +54,19 @@ html {
   scrollbar-color: var(--primary) var(--bg-dark);
 }
 
+/* Custom text selection styling */
+::selection {
+  background: var(--primary);
+  color: white;
+  text-shadow: none;
+}
+
+::-moz-selection {
+  background: var(--primary);
+  color: white;
+  text-shadow: none;
+}
+
 :root,
 [data-theme="dark"] {
   --primary: #7b3fe4;

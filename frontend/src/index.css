@@ -46,6 +46,59 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Enhanced keyboard focus ring styles for accessibility */
+:focus {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--secondary);
+  outline-offset: 3px;
+  border-radius: 4px;
+  transition: outline-offset 0.2s ease;
+}
+
+button:focus-visible,
+[role="button"]:focus-visible {
+  outline: 2px solid var(--secondary);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 4px rgba(0, 212, 255, 0.2);
+}
+
+a:focus-visible {
+  outline: 2px solid var(--secondary);
+  outline-offset: 2px;
+  text-decoration: underline;
+}
+
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 0;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(123, 63, 228, 0.2);
+}
+
+/* Skip link for keyboard navigation */
+.skip-to-content {
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--primary);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0 0 8px 8px;
+  z-index: 10000;
+  transition: top 0.3s ease;
+  font-weight: 600;
+}
+
+.skip-to-content:focus {
+  top: 0;
+}
+
 .app {
   min-height: 100vh;
   position: relative;

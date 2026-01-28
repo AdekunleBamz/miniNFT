@@ -21,3 +21,4 @@ export { useTransactionHistory, useRecentTransactions, usePendingTransactions } 
 export { default as useEvent, useLatest, useEffectOnce, useUpdateEffect, useUnmount, useSafeState, useRenderCount, useWhyDidYouUpdate, useMemoCompare } from './useEvent';
 export { default as useNotifications, usePushNotifications } from './useNotifications';
 export { default as useContractEvents, useMintEvents, useTransferEvents, useApprovalEvents } from './useContractEvents';
+export { default as useRipple } from './useRipple';

@@ -187,6 +187,7 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 1.5rem;
   margin-bottom: 2rem;
+  perspective: 1000px;
 }
 
 .stat-card {
@@ -196,12 +197,19 @@ body {
   border-radius: 16px;
   padding: 1.5rem;
   text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s;
+  transform-style: preserve-3d;
 }
 
 .stat-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 40px rgba(123, 63, 228, 0.2);
+  transform: translateY(-8px) rotateX(5deg) rotateY(-5deg);
+  box-shadow: 
+    0 15px 40px rgba(123, 63, 228, 0.25),
+    0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card:nth-child(even):hover {
+  transform: translateY(-8px) rotateX(5deg) rotateY(5deg);
 }
 
 .stat-value {

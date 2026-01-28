@@ -6964,3 +6964,61 @@ select:focus-visible {
 .status-indicator--large .status-indicator__dot { width: 12px; height: 12px; }
 .status-indicator--large .status-indicator__label { font-size: 1rem; }
 
+/* ===== Button Group ===== */
+.button-group {
+  display: inline-flex;
+  gap: 0.5rem;
+}
+
+.button-group--horizontal {
+  flex-direction: row;
+}
+
+.button-group--vertical {
+  flex-direction: column;
+}
+
+.button-group--attached {
+  gap: 0;
+}
+
+.button-group--attached > *:not(:first-child):not(:last-child) {
+  border-radius: 0;
+}
+
+.button-group--attached.button-group--horizontal > *:first-child {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.button-group--attached.button-group--horizontal > *:last-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.button-group--attached.button-group--vertical > *:first-child {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.button-group--attached.button-group--vertical > *:last-child {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.button-group--attached > *:not(:first-child) {
+  margin-left: -1px;
+}
+
+.button-group--full-width {
+  display: flex;
+  width: 100%;
+}
+
+.button-group--full-width > * {
+  flex: 1;
+}
+
+.button-group--small { gap: 0.25rem; }
+.button-group--large { gap: 0.75rem; }
+

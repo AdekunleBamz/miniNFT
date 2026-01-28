@@ -6863,3 +6863,50 @@ select:focus-visible {
   text-align: right;
 }
 
+
+/* ===== Breadcrumbs ===== */
+.breadcrumbs {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.breadcrumbs__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.breadcrumbs__item {
+  display: inline-flex;
+  align-items: center;
+}
+
+.breadcrumbs__item--active {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.breadcrumbs__item a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.breadcrumbs__item a:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+.breadcrumbs__separator {
+  margin: 0 0.5rem;
+  color: var(--text-tertiary);
+  user-select: none;
+}
+
+.breadcrumbs__collapse {
+  cursor: default;
+}
+

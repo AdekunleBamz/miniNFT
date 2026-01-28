@@ -6910,3 +6910,57 @@ select:focus-visible {
   cursor: default;
 }
 
+/* ===== Status Indicator ===== */
+.status-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.status-indicator__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--text-secondary);
+  transition: background 0.2s ease;
+}
+
+.status-indicator--online .status-indicator__dot {
+  background: #22c55e;
+}
+
+.status-indicator--offline .status-indicator__dot {
+  background: #6b7280;
+}
+
+.status-indicator--away .status-indicator__dot {
+  background: #f59e0b;
+}
+
+.status-indicator--busy .status-indicator__dot {
+  background: #ef4444;
+}
+
+.status-indicator--connecting .status-indicator__dot {
+  background: #3b82f6;
+}
+
+.status-indicator--pulse .status-indicator__dot {
+  animation: statusPulse 2s ease-in-out infinite;
+}
+
+@keyframes statusPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(1.1); }
+}
+
+.status-indicator__label {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.status-indicator--small .status-indicator__dot { width: 8px; height: 8px; }
+.status-indicator--small .status-indicator__label { font-size: 0.75rem; }
+.status-indicator--large .status-indicator__dot { width: 12px; height: 12px; }
+.status-indicator--large .status-indicator__label { font-size: 1rem; }
+

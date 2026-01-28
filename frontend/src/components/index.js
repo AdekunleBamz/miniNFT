@@ -75,6 +75,7 @@ export { default as Stepper, Step } from './Stepper';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export { default as ProgressRing } from './ProgressRing';
 export { default as VerificationCodeInput } from './VerificationCodeInput';
 export { default as ImageCompare } from './ImageCompare';
@@ -113,3 +114,6 @@ export { default as Timeline, TimelineItem } from './Timeline';
 =======
 export { default as Breadcrumbs } from './Breadcrumbs';
 >>>>>>> 0f25bfa (feat(components): add Breadcrumbs component)
+=======
+export { default as StatusIndicator } from './StatusIndicator';
+>>>>>>> 7912f2c (feat(components): add StatusIndicator component)

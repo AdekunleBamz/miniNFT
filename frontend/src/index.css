@@ -5591,3 +5591,112 @@ select:focus-visible {
   color: var(--error);
 }
 
+/* Animated Switch/Toggle styles */
+.switch-wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+}
+
+.switch-wrapper.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.switch-label {
+  font-size: 0.9375rem;
+  color: var(--text-primary);
+  user-select: none;
+}
+
+.animated-switch {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  width: 52px;
+  height: 28px;
+  cursor: pointer;
+  outline: none;
+}
+
+.animated-switch:focus-visible {
+  box-shadow: 0 0 0 3px rgba(123, 63, 228, 0.3);
+  border-radius: 14px;
+}
+
+.switch-track {
+  position: absolute;
+  inset: 0;
+  background: var(--bg-card);
+  border: 2px solid var(--border-color);
+  border-radius: 14px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animated-switch.checked .switch-track {
+  background: var(--primary);
+  border-color: var(--primary);
+}
+
+.switch-thumb {
+  position: absolute;
+  left: 2px;
+  width: 24px;
+  height: 24px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.animated-switch.checked .switch-thumb {
+  left: calc(100% - 26px);
+  background: white;
+}
+
+.switch-icon {
+  width: 14px;
+  height: 14px;
+  color: var(--primary);
+}
+
+.switch-small .animated-switch {
+  width: 40px;
+  height: 22px;
+}
+.switch-small .switch-thumb {
+  width: 18px;
+  height: 18px;
+}
+.switch-small .animated-switch.checked .switch-thumb {
+  left: calc(100% - 20px);
+}
+
+.switch-large .animated-switch {
+  width: 64px;
+  height: 34px;
+}
+.switch-large .switch-thumb {
+  width: 30px;
+  height: 30px;
+}
+.switch-large .animated-switch.checked .switch-thumb {
+  left: calc(100% - 32px);
+}
+
+.switch-secondary.checked .switch-track {
+  background: var(--secondary);
+  border-color: var(--secondary);
+}
+.switch-secondary .switch-icon { color: var(--secondary); }
+
+.switch-success.checked .switch-track {
+  background: var(--success);
+  border-color: var(--success);
+}
+.switch-success .switch-icon { color: var(--success); }
+

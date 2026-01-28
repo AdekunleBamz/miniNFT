@@ -62,3 +62,4 @@ export { default as BackToTop } from './BackToTop';
 export { default as LoadingDots } from './LoadingDots';
 export { default as NotificationBadge, BadgeWrapper } from './NotificationBadge';
 export { default as FloatingLabelInput } from './FloatingLabelInput';
+export { default as AnimatedSwitch } from './AnimatedSwitch';

@@ -6738,3 +6738,41 @@ select:focus-visible {
   min-width: 2ch;
 }
 
+
+/* ===== Rating ===== */
+.rating {
+  display: inline-flex;
+  gap: 2px;
+}
+
+.rating__star {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: var(--text-tertiary);
+  transition: color 0.2s ease, transform 0.1s ease;
+}
+
+.rating__star svg {
+  width: 24px;
+  height: 24px;
+}
+
+.rating__star--filled {
+  color: #fbbf24; /* yellow-400 */
+}
+
+.rating:not(.rating--readonly) .rating__star:hover,
+.rating:not(.rating--readonly) .rating__star--hover {
+  transform: scale(1.1);
+}
+
+.rating--readonly {
+  pointer-events: none;
+}
+
+.rating--small .rating__star svg { width: 16px; height: 16px; }
+.rating--medium .rating__star svg { width: 24px; height: 24px; }
+.rating--large .rating__star svg { width: 32px; height: 32px; }
+

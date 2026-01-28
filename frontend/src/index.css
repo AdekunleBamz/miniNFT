@@ -6209,3 +6209,51 @@ select:focus-visible {
   .image-compare__label--after { right: 12px; }
 }
 
+/* ===== File Dropzone ===== */
+.file-dropzone {
+  border: 2px dashed var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: var(--bg-secondary);
+}
+
+.file-dropzone:hover,
+.file-dropzone--active {
+  border-color: var(--primary);
+  background: rgba(var(--primary-rgb), 0.05);
+}
+
+.file-dropzone__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.file-dropzone__icon {
+  color: var(--text-tertiary);
+  margin-bottom: 1rem;
+  transition: color 0.2s ease;
+}
+
+.file-dropzone:hover .file-dropzone__icon,
+.file-dropzone--active .file-dropzone__icon {
+  color: var(--primary);
+}
+
+.file-dropzone__text {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.file-dropzone__hint {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+

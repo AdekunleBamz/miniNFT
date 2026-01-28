@@ -7060,3 +7060,17 @@ select:focus-visible {
 
 .icon-button svg { width: 100%; height: 100%; }
 
+/* Container component styles */
+.container { width: 100%; }
+.container-centered { margin-left: auto; margin-right: auto; }
+.container-padded { padding-left: 1rem; padding-right: 1rem; }
+
+.container-sm { max-width: 640px; }
+.container-default { max-width: 1200px; }
+.container-lg { max-width: 1400px; }
+.container-xl { max-width: 1600px; }
+.container-full { max-width: 100%; }
+
+@media (min-width: 640px) { .container-padded { padding-left: 1.5rem; padding-right: 1.5rem; } }
+@media (min-width: 1024px) { .container-padded { padding-left: 2rem; padding-right: 2rem; } }
+

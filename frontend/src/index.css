@@ -818,6 +818,32 @@ body {
   margin-bottom: 1rem;
 }
 
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(123, 63, 228, 0.2);
+  color: var(--text-secondary);
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  background: var(--primary);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 20px rgba(123, 63, 228, 0.4);
+}
+
 .footer-copy {
   margin-top: 1.5rem;
   font-size: 0.75rem;

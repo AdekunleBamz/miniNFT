@@ -381,8 +381,24 @@ body {
 }
 
 .mint-btn:hover:not(:disabled) {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 30px rgba(123, 63, 228, 0.4);
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 
+    0 10px 30px rgba(123, 63, 228, 0.4),
+    0 0 0 3px rgba(123, 63, 228, 0.2);
+  animation: pulse-glow 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 
+      0 10px 30px rgba(123, 63, 228, 0.4),
+      0 0 0 3px rgba(123, 63, 228, 0.2);
+  }
+  50% {
+    box-shadow: 
+      0 10px 40px rgba(123, 63, 228, 0.6),
+      0 0 0 6px rgba(123, 63, 228, 0.3);
+  }
 }
 
 .mint-btn:disabled {

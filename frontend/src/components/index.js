@@ -68,6 +68,7 @@ export { default as TypingText, TypewriterWords } from './TypingText';
 export { default as Stepper, Step } from './Stepper';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export { default as ProgressRing } from './ProgressRing';
 export { default as VerificationCodeInput } from './VerificationCodeInput';
 export { default as ImageCompare } from './ImageCompare';
@@ -76,9 +77,13 @@ export { default as ResizablePanel } from './ResizablePanel';
 export { default as Tree } from './Tree';
 export { default as Calendar } from './Calendar';
 export { default as Kbd } from './Kbd';
+export { default as Drawer } from './Drawer';
 =======
 export { default as Calendar } from './Calendar';
 >>>>>>> c25049e (feat(components): add Calendar component)
 =======
 export { default as Kbd, Shortcut } from './Kbd';
 >>>>>>> 972b36f (feat(components): add Kbd component)
+=======
+export { default as Drawer } from './Drawer';
+>>>>>>> 1ee46fc (feat(components): add Drawer component)

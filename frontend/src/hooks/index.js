@@ -22,3 +22,4 @@ export { default as useEvent, useLatest, useEffectOnce, useUpdateEffect, useUnmo
 export { default as useNotifications, usePushNotifications } from './useNotifications';
 export { default as useContractEvents, useMintEvents, useTransferEvents, useApprovalEvents } from './useContractEvents';
 export { default as useRipple } from './useRipple';
+export { default as useHoverDelayed } from './useHover';

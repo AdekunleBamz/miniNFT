@@ -5875,3 +5875,23 @@ select:focus-visible {
 .stepper-small .stepper-indicator { width: 32px; height: 32px; font-size: 0.75rem; }
 .stepper-large .stepper-indicator { width: 48px; height: 48px; font-size: 1rem; }
 
+/* AspectRatio container styles */
+.aspect-ratio-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.aspect-ratio-container > * {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.aspect-ratio-container > img,
+.aspect-ratio-container > video {
+  object-fit: cover;
+}
+

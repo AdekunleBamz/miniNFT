@@ -66,9 +66,14 @@ export { default as AnimatedSwitch } from './AnimatedSwitch';
 export { default as AnimatedCounter } from './AnimatedCounter';
 export { default as TypingText, TypewriterWords } from './TypingText';
 export { default as Stepper, Step } from './Stepper';
+<<<<<<< HEAD
 export { default as ProgressRing } from './ProgressRing';
 export { default as VerificationCodeInput } from './VerificationCodeInput';
 export { default as ImageCompare } from './ImageCompare';
 export { default as FileDropzone } from './FileDropzone';
 export { default as ResizablePanel } from './ResizablePanel';
 export { default as Tree } from './Tree';
+export { default as Calendar } from './Calendar';
+=======
+export { default as Calendar } from './Calendar';
+>>>>>>> c25049e (feat(components): add Calendar component)

@@ -5875,3 +5875,50 @@ select:focus-visible {
 .stepper-small .stepper-indicator { width: 32px; height: 32px; font-size: 0.75rem; }
 .stepper-large .stepper-indicator { width: 48px; height: 48px; font-size: 1rem; }
 
+/* Divider component styles */
+.divider {
+  display: flex;
+  align-items: center;
+  color: var(--text-secondary);
+}
+
+.divider-horizontal {
+  width: 100%;
+  height: 1px;
+  background: var(--border-color);
+}
+
+.divider-vertical {
+  width: 1px;
+  height: 100%;
+  min-height: 20px;
+  background: var(--border-color);
+}
+
+.divider-with-content {
+  background: transparent;
+  height: auto;
+}
+
+.divider-line {
+  flex: 1;
+  height: 1px;
+  background: var(--border-color);
+}
+
+.divider-content {
+  padding: 0 1rem;
+  font-size: 0.875rem;
+  white-space: nowrap;
+}
+
+.divider-dashed { border-style: dashed; background: none; border-top: 1px dashed var(--border-color); }
+.divider-dotted { border-style: dotted; background: none; border-top: 1px dotted var(--border-color); }
+
+.divider-primary .divider-line, .divider-primary { background: var(--primary); }
+.divider-secondary .divider-line, .divider-secondary { background: var(--secondary); }
+
+.divider-spacing-small { margin: 0.5rem 0; }
+.divider-spacing-medium { margin: 1rem 0; }
+.divider-spacing-large { margin: 2rem 0; }
+

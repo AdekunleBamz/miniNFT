@@ -66,3 +66,4 @@ export { default as AnimatedSwitch } from './AnimatedSwitch';
 export { default as AnimatedCounter } from './AnimatedCounter';
 export { default as TypingText, TypewriterWords } from './TypingText';
 export { default as Stepper, Step } from './Stepper';
+export { default as Divider } from './Divider';

@@ -6599,3 +6599,55 @@ select:focus-visible {
   }
 }
 
+/* ===== Collapsible ===== */
+.collapsible {
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--card-bg);
+}
+
+.collapsible__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--text-primary);
+  font-weight: 600;
+  text-align: left;
+  transition: background 0.2s ease;
+}
+
+.collapsible__header:hover {
+  background: rgba(var(--primary-rgb), 0.05);
+}
+
+.collapsible__title {
+  font-size: 1rem;
+}
+
+.collapsible__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.collapsible--open .collapsible__icon {
+  transform: rotate(180deg);
+}
+
+.collapsible__content-wrapper {
+  overflow: hidden;
+  transition: height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.collapsible__content {
+  padding: 0 1rem 1rem 1rem;
+  color: var(--text-secondary);
+}
+

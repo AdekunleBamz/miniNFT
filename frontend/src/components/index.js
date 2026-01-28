@@ -69,6 +69,7 @@ export { default as Stepper, Step } from './Stepper';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export { default as ProgressRing } from './ProgressRing';
 export { default as VerificationCodeInput } from './VerificationCodeInput';
 export { default as ImageCompare } from './ImageCompare';
@@ -78,6 +79,7 @@ export { default as Tree } from './Tree';
 export { default as Calendar } from './Calendar';
 export { default as Kbd } from './Kbd';
 export { default as Drawer } from './Drawer';
+export { default as Collapsible } from './Collapsible';
 =======
 export { default as Calendar } from './Calendar';
 >>>>>>> c25049e (feat(components): add Calendar component)
@@ -87,3 +89,6 @@ export { default as Kbd, Shortcut } from './Kbd';
 =======
 export { default as Drawer } from './Drawer';
 >>>>>>> 1ee46fc (feat(components): add Drawer component)
+=======
+export { default as Collapsible } from './Collapsible';
+>>>>>>> d905b77 (feat(components): add Collapsible component)

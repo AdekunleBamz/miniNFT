@@ -5761,3 +5761,117 @@ select:focus-visible {
   50% { opacity: 0; }
 }
 
+/* Stepper/Steps component styles */
+.stepper {
+  display: flex;
+  width: 100%;
+}
+
+.stepper-horizontal {
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.stepper-vertical {
+  flex-direction: column;
+}
+
+.stepper-item {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  position: relative;
+}
+
+.stepper-vertical .stepper-item {
+  flex-direction: row;
+  padding-bottom: 2rem;
+}
+
+.stepper-indicator {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.875rem;
+  background: var(--bg-card);
+  border: 2px solid var(--border-color);
+  color: var(--text-secondary);
+  transition: all 0.3s ease;
+  z-index: 1;
+  flex-shrink: 0;
+}
+
+.stepper-item-completed .stepper-indicator {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: white;
+}
+
+.stepper-item-active .stepper-indicator {
+  border-color: var(--primary);
+  color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(123, 63, 228, 0.2);
+}
+
+.stepper-check {
+  width: 20px;
+  height: 20px;
+}
+
+.stepper-content {
+  margin-left: 0.75rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.stepper-horizontal .stepper-content {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  margin-left: 0;
+  margin-top: 0.75rem;
+  white-space: nowrap;
+}
+
+.stepper-label {
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 0.875rem;
+}
+
+.stepper-description {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  margin-top: 0.25rem;
+}
+
+.stepper-connector {
+  flex: 1;
+  height: 2px;
+  background: var(--border-color);
+  margin: 0 0.5rem;
+  transition: background 0.3s ease;
+}
+
+.stepper-item-completed .stepper-connector {
+  background: var(--primary);
+}
+
+.stepper-vertical .stepper-connector {
+  position: absolute;
+  left: 19px;
+  top: 44px;
+  width: 2px;
+  height: calc(100% - 44px);
+  margin: 0;
+}
+
+.stepper-small .stepper-indicator { width: 32px; height: 32px; font-size: 0.75rem; }
+.stepper-large .stepper-indicator { width: 48px; height: 48px; font-size: 1rem; }
+

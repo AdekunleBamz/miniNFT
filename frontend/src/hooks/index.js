@@ -23,3 +23,4 @@ export { default as useNotifications, usePushNotifications } from './useNotifica
 export { default as useContractEvents, useMintEvents, useTransferEvents, useApprovalEvents } from './useContractEvents';
 export { default as useRipple } from './useRipple';
 export { default as useHoverDelayed } from './useHover';
+export { default as useCopyToClipboard } from './useCopyToClipboard';

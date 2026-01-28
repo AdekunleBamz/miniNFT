@@ -78,6 +78,7 @@ export { default as Stepper, Step } from './Stepper';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export { default as ProgressRing } from './ProgressRing';
 export { default as VerificationCodeInput } from './VerificationCodeInput';
 export { default as ImageCompare } from './ImageCompare';
@@ -125,3 +126,6 @@ export { default as ButtonGroup } from './ButtonGroup';
 =======
 export { default as IconButton } from './IconButton';
 >>>>>>> a908c28 (feat(ui): add icon button component)
+=======
+export { default as Container } from './Container';
+>>>>>>> 3696d0c (feat(ui): add responsive container component)

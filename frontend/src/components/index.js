@@ -37,7 +37,7 @@ export { default as Leaderboard } from './Leaderboard';
 export { default as GasEstimator } from './GasEstimator';
 export { default as TransferModal } from './TransferModal';
 export { default as BatchTransfer } from './BatchTransfer';
-export { default as Accessibility, SkipLink, VisuallyHidden, FocusTrap, LiveRegion, IconButton } from './Accessibility';
+export { default as Accessibility, SkipLink, VisuallyHidden, FocusTrap, LiveRegion } from './Accessibility';
 export { default as ImageUploader } from './ImageUploader';
 export { default as Accordion, AccordionItem } from './Accordion';
 export { default as Tabs, VerticalTabs } from './Tabs';
@@ -66,19 +66,6 @@ export { default as AnimatedSwitch } from './AnimatedSwitch';
 export { default as AnimatedCounter } from './AnimatedCounter';
 export { default as TypingText, TypewriterWords } from './TypingText';
 export { default as Stepper, Step } from './Stepper';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 export { default as ProgressRing } from './ProgressRing';
 export { default as VerificationCodeInput } from './VerificationCodeInput';
 export { default as ImageCompare } from './ImageCompare';
@@ -91,41 +78,13 @@ export { default as Drawer } from './Drawer';
 export { default as Collapsible } from './Collapsible';
 export { default as Slider } from './Slider';
 export { default as Rating } from './Rating';
-=======
-export { default as Calendar } from './Calendar';
->>>>>>> c25049e (feat(components): add Calendar component)
-=======
-export { default as Kbd, Shortcut } from './Kbd';
->>>>>>> 972b36f (feat(components): add Kbd component)
-=======
-export { default as Drawer } from './Drawer';
->>>>>>> 1ee46fc (feat(components): add Drawer component)
-=======
-export { default as Collapsible } from './Collapsible';
->>>>>>> d905b77 (feat(components): add Collapsible component)
-=======
-export { default as Slider } from './Slider';
->>>>>>> 354ca85 (feat(components): add Slider component)
-=======
-export { default as Rating } from './Rating';
->>>>>>> cde4099 (feat(components): add Rating component)
-=======
->>>>>>> abacb51 (feat(ui): add stepper/steps component for multi-step flows (#30))
-=======
 export { default as Timeline, TimelineItem } from './Timeline';
->>>>>>> ecffc8a (feat(components): add Timeline component)
-=======
 export { default as Breadcrumbs } from './Breadcrumbs';
->>>>>>> 0f25bfa (feat(components): add Breadcrumbs component)
-=======
 export { default as StatusIndicator } from './StatusIndicator';
->>>>>>> 7912f2c (feat(components): add StatusIndicator component)
-=======
 export { default as ButtonGroup } from './ButtonGroup';
->>>>>>> 4295130 (feat(components): add ButtonGroup component)
-=======
 export { default as IconButton } from './IconButton';
->>>>>>> a908c28 (feat(ui): add icon button component)
-=======
 export { default as Container } from './Container';
->>>>>>> 3696d0c (feat(ui): add responsive container component)
+export { default as LazyImage } from './LazyImage';
+export { default as AspectRatio } from './AspectRatio';
+export { default as Divider } from './Divider';
+export { default as Chip } from './Chip';

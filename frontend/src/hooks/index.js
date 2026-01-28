@@ -24,3 +24,4 @@ export { default as useContractEvents, useMintEvents, useTransferEvents, useAppr
 export { default as useRipple } from './useRipple';
 export { default as useHoverDelayed } from './useHover';
 export { default as useCopyToClipboard } from './useCopyToClipboard';
+export { default as useOnClickOutside } from './useOnClickOutside';

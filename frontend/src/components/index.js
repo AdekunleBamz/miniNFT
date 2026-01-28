@@ -72,6 +72,7 @@ export { default as Stepper, Step } from './Stepper';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export { default as ProgressRing } from './ProgressRing';
 export { default as VerificationCodeInput } from './VerificationCodeInput';
 export { default as ImageCompare } from './ImageCompare';
@@ -102,3 +103,5 @@ export { default as Slider } from './Slider';
 =======
 export { default as Rating } from './Rating';
 >>>>>>> cde4099 (feat(components): add Rating component)
+=======
+>>>>>>> abacb51 (feat(ui): add stepper/steps component for multi-step flows (#30))

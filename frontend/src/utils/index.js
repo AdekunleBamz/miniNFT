@@ -22,3 +22,4 @@ export { default as web3Utils } from './web3';
 export { default as dateUtils } from './dateUtils';
 export { default as stringUtils } from './stringUtils';
 export { default as validationUtilsNew } from './validationUtils';
+export * from './formatters';

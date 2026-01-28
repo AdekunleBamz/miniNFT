@@ -76,6 +76,7 @@ export { default as Stepper, Step } from './Stepper';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export { default as ProgressRing } from './ProgressRing';
 export { default as VerificationCodeInput } from './VerificationCodeInput';
 export { default as ImageCompare } from './ImageCompare';
@@ -117,3 +118,6 @@ export { default as Breadcrumbs } from './Breadcrumbs';
 =======
 export { default as StatusIndicator } from './StatusIndicator';
 >>>>>>> 7912f2c (feat(components): add StatusIndicator component)
+=======
+export { default as ButtonGroup } from './ButtonGroup';
+>>>>>>> 4295130 (feat(components): add ButtonGroup component)

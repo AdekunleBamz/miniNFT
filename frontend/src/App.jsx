@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Header, Stats, MintCard, Gallery, Features, Footer, ProgressBar, useToast } from './components';
+import { Header, Stats, MintCard, Gallery, Features, Footer, ProgressBar, useToast, ScrollProgress } from './components';
 import { useNFTContract, useConfetti } from './hooks';
 import { MAX_SUPPLY } from './contract';
 
@@ -46,6 +46,8 @@ function App() {
 
   return (
     <div className="app">
+      <ScrollProgress />
+      
       {/* Background effects */}
       <div className="bg-effects">
         <div className="gradient-orb orb-1"></div>

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Header, Stats, MintCard, Gallery, Features, Footer, ProgressBar, useToast, ScrollProgress } from './components';
+import { Header, Stats, MintCard, Gallery, Features, Footer, ProgressBar, useToast, ScrollProgress, BackToTop } from './components';
 import { useNFTContract, useConfetti } from './hooks';
 import { MAX_SUPPLY } from './contract';
 
@@ -121,6 +121,7 @@ function App() {
       </main>
 
       <Footer />
+      <BackToTop />
     </div>
   );
 }

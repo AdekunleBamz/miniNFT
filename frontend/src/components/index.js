@@ -58,3 +58,4 @@ export { default as MintProgress } from './MintProgress';
 export { default as ImagePreview, ImageGallery } from './ImagePreview';
 export { default as Confetti, ConfettiButton, useConfettiEffect } from './Confetti';
 export { default as ScrollProgress } from './ScrollProgress';
+export { default as BackToTop } from './BackToTop';

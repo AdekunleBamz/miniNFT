@@ -68,3 +68,4 @@ export { default as TypingText, TypewriterWords } from './TypingText';
 export { default as Stepper, Step } from './Stepper';
 export { default as ProgressRing } from './ProgressRing';
 export { default as VerificationCodeInput } from './VerificationCodeInput';
+export { default as ImageCompare } from './ImageCompare';

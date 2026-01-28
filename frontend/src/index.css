@@ -6301,3 +6301,64 @@ select:focus-visible {
   background: white;
 }
 
+/* ===== Tree ===== */
+.tree {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tree--nested {
+  padding-left: 1.5rem;
+  border-left: 1px dashed var(--border-color);
+  margin-left: 0.75rem;
+}
+
+.tree__item {
+  margin: 0.25rem 0;
+}
+
+.tree__content {
+  display: flex;
+  align-items: center;
+  padding: 0.375rem 0.5rem;
+  border-radius: var(--radius-sm);
+  cursor: default;
+  color: var(--text-primary);
+  transition: background 0.2s ease;
+}
+
+.tree__content--parent {
+  cursor: pointer;
+}
+
+.tree__content:hover {
+  background: var(--bg-hover);
+}
+
+.tree__toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.5rem;
+  color: var(--text-tertiary);
+  transition: transform 0.2s ease;
+  width: 16px;
+  height: 16px;
+}
+
+.tree__toggle--expanded {
+  transform: rotate(90deg);
+}
+
+.tree__icon {
+  margin-right: 0.5rem;
+  display: flex;
+  align-items: center;
+  color: var(--text-secondary);
+}
+
+.tree__label {
+  font-size: 0.875rem;
+}
+

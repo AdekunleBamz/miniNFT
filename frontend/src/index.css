@@ -6257,3 +6257,47 @@ select:focus-visible {
   color: var(--text-secondary);
 }
 
+/* ===== ResizablePanel ===== */
+.resizable-panel {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+}
+
+.resizable-panel__pane {
+  overflow: auto;
+  height: 100%;
+}
+
+.resizable-panel__handle {
+  width: 8px;
+  background: var(--bg-secondary);
+  cursor: col-resize;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.2s ease;
+  z-index: 10;
+  flex-shrink: 0;
+}
+
+.resizable-panel__handle:hover,
+.resizable-panel__handle--dragging {
+  background: var(--primary);
+}
+
+.resizable-panel__handle-bar {
+  width: 2px;
+  height: 20px;
+  background: var(--border-color);
+  border-radius: 1px;
+}
+
+.resizable-panel__handle:hover .resizable-panel__handle-bar,
+.resizable-panel__handle--dragging .resizable-panel__handle-bar {
+  background: white;
+}
+

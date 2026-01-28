@@ -70,3 +70,4 @@ export { default as ProgressRing } from './ProgressRing';
 export { default as VerificationCodeInput } from './VerificationCodeInput';
 export { default as ImageCompare } from './ImageCompare';
 export { default as FileDropzone } from './FileDropzone';
+export { default as ResizablePanel } from './ResizablePanel';

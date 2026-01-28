@@ -247,14 +247,51 @@ body {
 
 /* Mint card */
 .mint-card {
+  position: relative;
   background: var(--bg-card);
   backdrop-filter: blur(10px);
-  border: 1px solid var(--border-color);
   border-radius: 24px;
   padding: 2.5rem;
   max-width: 500px;
   margin: 0 auto 3rem;
   text-align: center;
+  overflow: hidden;
+}
+
+/* Animated gradient border */
+.mint-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 24px;
+  padding: 2px;
+  background: linear-gradient(
+    135deg,
+    var(--primary) 0%,
+    var(--secondary) 25%,
+    var(--primary-light) 50%,
+    var(--secondary) 75%,
+    var(--primary) 100%
+  );
+  background-size: 300% 300%;
+  animation: gradient-shift 4s ease infinite;
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.mint-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
 }
 
 .mint-title {

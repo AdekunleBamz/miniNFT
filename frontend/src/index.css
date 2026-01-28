@@ -391,12 +391,20 @@ body {
   font-size: 1.5rem;
   border-radius: 12px;
   cursor: pointer;
-  transition: all 0.3s;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
 }
 
 .quantity-btn:hover:not(:disabled) {
   border-color: var(--primary);
-  background: rgba(123, 63, 228, 0.1);
+  background: rgba(123, 63, 228, 0.2);
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(123, 63, 228, 0.3);
+}
+
+.quantity-btn:active:not(:disabled) {
+  transform: scale(0.95);
 }
 
 .quantity-btn:disabled {
@@ -405,9 +413,23 @@ body {
 }
 
 .quantity-value {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 700;
-  min-width: 60px;
+  min-width: 80px;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transition: transform 0.2s;
+}
+
+.quantity-value.bounce {
+  animation: quantity-bounce 0.3s ease;
+}
+
+@keyframes quantity-bounce {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
 }
 
 /* Total price */

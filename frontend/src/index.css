@@ -6447,3 +6447,47 @@ select:focus-visible {
   background: var(--primary-dark);
 }
 
+/* ===== Kbd / Keyboard Key ===== */
+.kbd {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-bottom-width: 2px;
+  border-radius: 4px;
+  padding: 0 0.375rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.875rem;
+  color: var(--text-primary);
+  min-width: 1.5rem;
+  height: 1.5rem;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  line-height: 1;
+}
+
+.kbd--small {
+  padding: 0 0.25rem;
+  font-size: 0.75rem;
+  min-width: 1.25rem;
+  height: 1.25rem;
+}
+
+.kbd--large {
+  padding: 0 0.5rem;
+  font-size: 1rem;
+  min-width: 2rem;
+  height: 2rem;
+}
+
+.shortcut {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.shortcut__separator {
+  color: var(--text-tertiary);
+  font-size: 0.875rem;
+}
+

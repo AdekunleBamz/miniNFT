@@ -63,3 +63,4 @@ export { default as LoadingDots } from './LoadingDots';
 export { default as NotificationBadge, BadgeWrapper } from './NotificationBadge';
 export { default as FloatingLabelInput } from './FloatingLabelInput';
 export { default as AnimatedSwitch } from './AnimatedSwitch';
+export { default as AnimatedCounter } from './AnimatedCounter';
